@@ -12,4 +12,11 @@ class Operation(ABC):
 
     @abstractmethod
     def execute(self, a, b):
-        pass  # forces child classes to implement this
+        pass  
+    
+    def describe(self, a, b, result):
+        return f"{a} {self.symbol} {b} = {result}"
+    
+    def __str__(self):
+        return f"{self.name} ({self.symbol})"
+
