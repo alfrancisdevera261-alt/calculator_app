@@ -20,3 +20,53 @@ class Operation(ABC):
     def __str__(self):
         return f"{self.name} ({self.symbol})"
 
+class Addition(Operation):
+    symbol = "+"
+    name = "Addition"
+
+    def execute(self, a, b):
+        return a + b
+
+
+class Subtraction(Operation):
+    symbol = "-"
+    name = "Subtraction"
+
+    def execute(self, a, b):
+        return a - b
+
+
+class Multiplication(Operation):
+    symbol = "×"
+    name = "Multiplication"
+
+    def execute(self, a, b):
+        return a * b
+
+
+class Division(Operation):
+    symbol = "÷"
+    name = "Division"
+
+    def execute(self, a, b):
+        if b == 0:
+            raise DivisionByZeroError()
+        return a / b
+
+
+class Modulo(Operation):
+    symbol = "%"
+    name = "Modulo"
+
+    def execute(self, a, b):
+        if b == 0:
+            raise DivisionByZeroError()
+        return a % b
+
+
+class Exponentiation(Operation):
+    symbol = "^"
+    name = "Exponentiation"
+
+    def execute(self, a, b):
+        return a ** b
