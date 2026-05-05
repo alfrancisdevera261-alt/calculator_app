@@ -6,3 +6,9 @@ class InvalidOperationError(CalculatorError):
     """Raised when user selects invalid menu option"""
     def __init__(self, choice):
         super().__init__(f"'{choice}' is not a valid operation.")
+        
+
+class DivisionByZeroError(CalculatorError):
+    """Raised when dividing by zero"""
+    def __init__(self):
+        super().__init__("Cannot divide by zero.")
