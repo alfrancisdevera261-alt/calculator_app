@@ -82,3 +82,12 @@ class Calculator:
                 self.history.append(HistoryEntry(expr, result))
 
                 print("Result:", result)
+                
+            except DivisionByZeroError as e:
+                print("Math Error:", e)
+
+            except InvalidNumberError as e:
+                print("Input Error:", e)
+
+            except InvalidOperationError as e:
+                print("Choice Error:", e)
