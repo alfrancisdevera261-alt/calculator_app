@@ -65,3 +65,6 @@ class Calculator:
                     break
 
                 operation = self.get_operation(choice)
+                
+                a = self.get_number("A: ")
+                b = self.get_number("B: ")
