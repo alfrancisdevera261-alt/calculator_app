@@ -31,7 +31,7 @@ class Calculator:
     - Stores all calculations in history
     """
     
-MENU = {
+    MENU = {
         "1": Addition(),
         "2": Subtraction(),
         "3": Multiplication(),
@@ -39,3 +39,6 @@ MENU = {
         "5": Modulo(),
         "6": Exponentiation(),
     }
+
+    def __init__(self):
+        self.history = []
