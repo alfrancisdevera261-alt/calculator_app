@@ -68,3 +68,12 @@ class Calculator:
                 
                 a = self.get_number("A: ")
                 b = self.get_number("B: ")
+                
+                try:
+                    if isinstance(operation, (Division, Modulo)):
+                        validate_nonzero(b)
+
+                    result = operation.execute(a, b)
+
+                except ZeroDivisionError:
+                    raise DivisionByZeroError()
