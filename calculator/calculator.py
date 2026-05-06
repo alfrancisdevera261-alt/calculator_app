@@ -58,7 +58,7 @@ class Calculator:
     def run(self):
         while True:
             try:
-                print("\n1:Add 2:Sub 3:Mul 4:Div 5:Mod 6:Exp Q:Quit")
+                print("\n1:Addition 2:Subtraction 3:Multiplication 4:Division 5:Modulo 6:Exponentiation Q:Quit")
                 choice = input("Enter choice: ").upper()
 
                 if choice == "Q":
@@ -66,8 +66,8 @@ class Calculator:
 
                 operation = self.get_operation(choice)
                 
-                a = self.get_number("A: ")
-                b = self.get_number("B: ")
+                a = self.get_number("First number: ")
+                b = self.get_number("Second number: ")
                 
                 try:
                     if isinstance(operation, (Division, Modulo)):
