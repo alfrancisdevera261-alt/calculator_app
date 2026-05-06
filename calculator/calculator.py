@@ -77,3 +77,8 @@ class Calculator:
 
                 except ZeroDivisionError:
                     raise DivisionByZeroError()
+                
+                expr = operation.describe(a, b, result)
+                self.history.append(HistoryEntry(expr, result))
+
+                print("Result:", result)
