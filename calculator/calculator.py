@@ -11,3 +11,5 @@ from operations.exceptions import (
 )
 
 from calculator.validators import parse_number, validate_nonzero
+
+from calculator.history import HistoryEntry
