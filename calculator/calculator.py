@@ -49,3 +49,8 @@ class Calculator:
             return parse_number(raw)
         except ValueError:
             raise InvalidNumberError(raw)
+        
+    def get_operation(self, choice):
+        if choice not in self.MENU:
+            raise InvalidOperationError(choice)
+        return self.MENU[choice]
