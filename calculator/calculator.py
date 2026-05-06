@@ -54,3 +54,14 @@ class Calculator:
         if choice not in self.MENU:
             raise InvalidOperationError(choice)
         return self.MENU[choice]
+    
+    def run(self):
+        while True:
+            try:
+                print("\n1:Add 2:Sub 3:Mul 4:Div 5:Mod 6:Exp Q:Quit")
+                choice = input("Enter choice: ").upper()
+
+                if choice == "Q":
+                    break
+
+                operation = self.get_operation(choice)
