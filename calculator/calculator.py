@@ -42,3 +42,10 @@ class Calculator:
 
     def __init__(self):
         self.history = []
+
+    def get_number(self, prompt):
+        raw = input(prompt)
+        try:
+            return parse_number(raw)
+        except ValueError:
+            raise InvalidNumberError(raw)
