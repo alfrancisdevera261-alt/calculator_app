@@ -91,3 +91,9 @@ class Calculator:
 
             except InvalidOperationError as e:
                 print("Choice Error:", e)
+                
+            except CalculatorError as e:
+                print("Calculator Error:", e)
+
+            except Exception as e:
+                print("Unexpected Error:", e)
